@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#082465">
+    <title>Mi Tienda Escolar</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header_section">
+        <nav class="custom_nav-container">
+            <div class="container">
+                <div class="navbar-brand">
+                    <span>Tienda Campus</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero_section">
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero_detail-box">
+                    <h1>Aquí encuentras los productos del campus</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="main_nav">
+        <div class="container">
+            <ul>
+                <li><a href="#" data-page="papeleria" class="call_to-btn active">Papeleria</a></li>
+                <li><a href="#" data-page="electronica" class="call_to-btn">Electronica</a></li>
+                <li><a href="#" data-page="snacks" class="call_to-btn">Snacks</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="contenido" class="layout_padding">
+        <div class="container">
+            <h2 class="main-heading">Papelería</h2>
+            <div id="lista-productos" class="vehicle_section">
+                <p style="text-align: center;">Cargando productos...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer_section">
+        <div class="container">
+            <p>&copy; Universidad XYZ – Tienda Campus 2025</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        // SW
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(reg => console.log('SW Registrado', reg))
+                .catch(err => console.log('Error al intentar registrar SW', err));
+        }
+    </script>
+</body>
+</html>
