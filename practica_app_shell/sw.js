@@ -60,4 +60,11 @@ self.addEventListener('fetch', (event) => {
                     });
             })
     );
+
 });
+
+//¿Cómo beneficia a los usuarios cargar rápido el App Shell aunque no haya conexión?
+//Carga la cache
+
+//¿Qué diferencia hay entre el shell y los productos dinámicos?
+//Almacena lo que ya se tiene guardado para mostrarse aunque no haya conexión
